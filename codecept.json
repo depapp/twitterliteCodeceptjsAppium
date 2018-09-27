@@ -1,0 +1,37 @@
+{
+  "output": "./output",
+  "helpers": {
+    "Appium": {
+      "host": "localhost",
+      "port": "4723",
+      "platform": "Android",
+      "smartWait": 10000,
+      "desiredCapabilities": {
+        "platformName": "Android",
+        "platformVersion": "7.1.1",
+        "deviceName": "Android Emulator",
+        "udid": "emulator-5554",
+        "app": "/Users/user/twitterliteCodeceptjsAppium/twitterlite.apk",
+        "appPackage": "com.twitter.android.lite",
+        "autoGrantPermissions": "true"
+      }
+    }
+  },
+  "include": {
+    "I": "./steps_file.js",
+    "authPage": "./pages/auth.js"
+  },
+  "mocha": {},
+  "bootstrap": false,
+  "teardown": null,
+  "hooks": [],
+  "gherkin": {},
+  "plugins": {
+    "screenshotOnFail": {
+      "enabled": true
+    },
+    "allure": {}
+  },
+  "tests": "./*_test.js",
+  "name": "twitterliteCodeceptjsAppium"
+}
